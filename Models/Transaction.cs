@@ -11,7 +11,7 @@ public class Transaction
     public int CategoryId { get; set; }
     public Category Category { get; set; }
     
-    [Column(TypeName = "nvarchar(75)")] 
+    [Column(TypeName = "varchar(75)")] 
     public string? Note { get; set; }
     
     public DateTime Date { get; set; } = DateTime.Now;
