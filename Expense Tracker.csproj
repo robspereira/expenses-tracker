@@ -30,4 +30,9 @@
       <Content Remove="Views\Category\Details.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Transaction\CreateOrEdit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Transaction\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
