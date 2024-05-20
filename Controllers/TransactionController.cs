@@ -41,6 +41,10 @@ namespace Expense_Tracker.Controllers
         {
             if (ModelState.IsValid)
             {
+                DateTime inputDate = transaction.Date;
+                
+                DateTime utcDate = inputDate.Kind == DateTimeKind.Utc ? inputDate : inputDate.ToUniversalTime();
+                transaction.Date = utcDate;
                 _context.Add(transaction);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
