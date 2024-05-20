@@ -26,6 +26,8 @@
 
     <ItemGroup>
       <Content Remove="Views\Category\Edit.cshtml" />
+      <Content Remove="Views\Category\Delete.cshtml" />
+      <Content Remove="Views\Category\Details.cshtml" />
     </ItemGroup>
 
 </Project>

@@ -27,8 +27,13 @@ body {
   color: #fff;
 }
 
-/*Button*/
+/*Breadcrumb*/
+.e-breadcrumb a, .e-breadcrumb a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+}
 
+/*Button*/
 .btn:focus, .btn:active{
   outline: none;
   box-shadow: none;
