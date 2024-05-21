@@ -10,6 +10,7 @@ public class Category
     public int CategoryId { get; set; }
     
     [Column(TypeName = "varchar(50)")]
+    [Required(ErrorMessage = "Title is required.")]
     public string Title { get; set; }
 
     [Column(TypeName = "varchar(5)")] 

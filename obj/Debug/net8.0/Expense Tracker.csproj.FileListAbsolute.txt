@@ -295,3 +295,5 @@
 /home/lucas/Documentos/rider-workspace/Expense Tracker/bin/Debug/net8.0/Syncfusion.EJ2.dll
 /home/lucas/Documentos/rider-workspace/Expense Tracker/bin/Debug/net8.0/Syncfusion.Licensing.dll
 /home/lucas/Documentos/rider-workspace/Expense Tracker/obj/Debug/net8.0/Expense Tracker.MvcApplicationPartsAssemblyInfo.cs
+/home/lucas/Documentos/rider-workspace/Expense Tracker/bin/Debug/net8.0/MySqlConnector.dll
+/home/lucas/Documentos/rider-workspace/Expense Tracker/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll

@@ -26,10 +26,11 @@ namespace Expense_Tracker.Controllers
         }
 
         // GET: Transaction/Create
-        public IActionResult CreateOrEdit()
+        public IActionResult CreateOrEdit(int id = 0)
         {
             PopulateCategories();
-            return View(new Transaction());
+            if(id == 0) return View(new Transaction());
+            else return View(_context.Transactions.Find(id));
         }
 
         // POST: Transaction/Create
@@ -42,10 +43,14 @@ namespace Expense_Tracker.Controllers
             if (ModelState.IsValid)
             {
                 DateTime inputDate = transaction.Date;
-                
                 DateTime utcDate = inputDate.Kind == DateTimeKind.Utc ? inputDate : inputDate.ToUniversalTime();
                 transaction.Date = utcDate;
-                _context.Add(transaction);
+
+                if (transaction.TransactionId == 0)
+                    _context.Add(transaction);
+                else
+                    _context.Update(transaction);
+              
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
