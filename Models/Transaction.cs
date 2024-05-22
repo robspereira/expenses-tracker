@@ -17,6 +17,8 @@ public class Transaction
     
     [Column(TypeName = "varchar(75)")] 
     public string? Note { get; set; }
+    
+    [Column(TypeName = "DATETIME")]
     public DateTime Date { get; set; } = DateTime.Now;
     
     [NotMapped]

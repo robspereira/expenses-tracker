@@ -17,16 +17,7 @@ namespace Expense_Tracker.Controllers
         public async Task<ActionResult> Index()
         {
             DateTime StartDate = DateTime.Today.AddDays(-6);
-            System.Console.WriteLine(StartDate);
-            DateTime utcDate = StartDate.Kind == DateTimeKind.Utc ? StartDate : StartDate.ToUniversalTime();
-            StartDate = utcDate;
-            System.Console.WriteLine(StartDate);
-            
             DateTime EndDate = DateTime.Today;
-            System.Console.WriteLine(EndDate);
-            utcDate = EndDate.Kind == DateTimeKind.Utc ? EndDate : EndDate.ToUniversalTime();
-            EndDate = utcDate;
-            System.Console.WriteLine(EndDate);
                 
             List<Transaction> SelectedTransactions = await _context.Transactions
                 .Include(x => x.Category)
@@ -63,8 +54,6 @@ namespace Expense_Tracker.Controllers
                 .ToList();
             
             //Spline Chart
-            
-            //Income
             //Income
             List<SplineChartData> IncomeSummary = SelectedTransactions
                 .Where(i => i.Category.Type == "Income")
@@ -73,10 +62,8 @@ namespace Expense_Tracker.Controllers
                 {
                     day = k.First().Date.ToString("dd-MMM"),
                     income = k.Sum(l => l.Amount)
-                })
-                .ToList();
-
-            //Expense
+                }).ToList();
+            
             List<SplineChartData> ExpenseSummary = SelectedTransactions
                 .Where(i => i.Category.Type == "Expense")
                 .GroupBy(j => j.Date)
@@ -84,27 +71,25 @@ namespace Expense_Tracker.Controllers
                 {
                     day = k.First().Date.ToString("dd-MMM"),
                     expense = k.Sum(l => l.Amount)
-                })
-                .ToList();
+                }).ToList();
 
-            //Combine Income & Expense
             string[] Last7Days = Enumerable.Range(0, 7)
-                .Select(i => StartDate.AddDays(i).Date.ToString("dd/MM"))
+                .Select(i => StartDate.AddDays(i).ToString("dd-MMM"))
                 .ToArray();
-            System.Console.WriteLine(Last7Days);
 
             ViewBag.SplineChartData = from day in Last7Days
-                                    join income in IncomeSummary on day equals income.day into dayIncomeJoined
-                                    from income in dayIncomeJoined.DefaultIfEmpty()
-                                    join expense in ExpenseSummary on day equals expense.day into expenseJoined
-                                    from expense in expenseJoined.DefaultIfEmpty()
-                                    select new
-                                    {
-                                        day = day,
-                                        income = income == null ? 0 : income.income,
-                                        expense = expense == null ? 0 : expense.expense,
-                                    };
-            
+                join income in IncomeSummary on day equals income.day into dayIncomeJoined
+                from income in dayIncomeJoined.DefaultIfEmpty()
+                join expense in ExpenseSummary on day equals expense.day into expenseJoined
+                from expense in expenseJoined.DefaultIfEmpty()
+                select new
+                {
+                    day = day,
+                    income = income == null ? 0 : income.income,
+                    expense = expense == null ? 0 : expense.expense,
+                };
+                
+        
             return View();
         }
 
