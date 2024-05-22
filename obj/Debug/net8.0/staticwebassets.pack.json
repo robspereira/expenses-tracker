@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets/logo.png"
     },
     {
+      "Id": "/home/lucas/Documentos/rider-workspace/Expense Tracker/wwwroot/profile.png",
+      "PackagePath": "staticwebassets/profile.png"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Expense Tracker.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

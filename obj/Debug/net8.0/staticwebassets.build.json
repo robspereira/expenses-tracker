@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RAXkCmRSmXRsRAfD9xt8dDUEQcX6MruGOesjyWpLTAQ=",
+  "Hash": "Z3K0SCk4ozZ/L/HlT9VrtbCij6+s1XQbab7CSC/Jm2A=",
   "Source": "Expense Tracker",
   "BasePath": "_content/Expense Tracker",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/logo.png"
+    },
+    {
+      "Identity": "/home/lucas/Documentos/rider-workspace/Expense Tracker/wwwroot/profile.png",
+      "SourceId": "Expense Tracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/lucas/Documentos/rider-workspace/Expense Tracker/wwwroot/",
+      "BasePath": "_content/Expense Tracker",
+      "RelativePath": "profile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/profile.png"
     }
   ]
 }

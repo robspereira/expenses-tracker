@@ -55,8 +55,7 @@
                                            xName="categoryTitleWithIcon"
                                            yName="amount"
                                            innerRadius="60%"
-                                           legendShape="Circle"
-                                           palettes=@(new string[]{"#54ffa9", "#ffe91a"})>
+                                           legendShape="Circle">
                         <e-accumulationseries-datalabel name="formattedAmount" visible></e-accumulationseries-datalabel>
                     </e-accumulation-series>
                 </e-accumulation-series-collection>
@@ -100,9 +99,9 @@
 
                     </e-series>
                 </e-series-collection>
-                <e-accumulationchart-legendsettings position="Top" alignment="Far" toggleVisibility="false">
+                <e-chart-legendsettings position="Top" alignment="Far" toggleVisibility="false">
                     <e-legendsettings-textstyle color="#fff" size="1rem"></e-legendsettings-textstyle>
-                </e-accumulationchart-legendsettings>
+                </e-chart-legendsettings>
                 <e-chart-tooltipsettings enable shared></e-chart-tooltipsettings>
             </ejs-chart>
         </div>
@@ -117,9 +116,20 @@
                 <h5 class="fw-bold">Recent Transactions</h5>
             </div>
             <div class="px-4 pb-4">
-                <ejs-grid id="recent-transactions">
-                    
+                <ejs-grid id="recent-transactions" dataSource="@ViewBag.RecentTransactions" gridLines="None">
+                    <e-grid-columns>
+                        <e-grid-column headerText="Category" field="CategoryTitleWithIcon"></e-grid-column>
+                        <e-grid-column headerText="Date" field="Date" width="110px" type="date" format="dd/MM/yy" textAlign="Left"></e-grid-column>
+                        <e-grid-column headerText="Amount" field="FormattedAmount" textAlign="Right" width="110px"></e-grid-column>
+                    </e-grid-columns>
                 </ejs-grid>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="widget h-100">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <span><i class="fa-solid fa-plus fa-2xl"></i>Widget</span>
             </div>
         </div>
     </div>
