@@ -1,7 +1,7 @@
 @model Expense_Tracker.Models.Category
 
 @{
-    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Create a new category" : "Edit Category";
+    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Criar Uma Nova Categoria" : "Editar Categoria";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -15,20 +15,20 @@
                 <div class="mb-3">
                     <div class='e-btn-group custom-rbt-group'>
                         <input type="radio" id="radioleft" name="Type" value="Expense" checked="(@Model.Type=="Expense")"/>
-                        <label class="e-btn" for="radioleft">Expense</label>
+                        <label class="e-btn" for="radioleft">Gasto</label>
                         <input type="radio" id="radiomiddle" name="Type" value="Income" checked="(@Model.Type=="Income")"/>
-                        <label class="e-btn" for="radiomiddle">Income</label>
+                        <label class="e-btn" for="radiomiddle">Recebido</label>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <ejs-textbox id="title" placeholder="Title" ejs-for="Title" floatLabelType="Always"></ejs-textbox>
+                    <ejs-textbox id="title" placeholder="Título" ejs-for="Title" floatLabelType="Always"></ejs-textbox>
                     <span asp-validation-for="Title" class="text-danger fs-6"></span>
                 </div>
                 <div class="mb-3">
-                    <ejs-textbox id="icon" placeholder="Icon" ejs-for="Icon" floatLabelType="Always"></ejs-textbox>
+                    <ejs-textbox id="icon" placeholder="Ícone" ejs-for="Icon" floatLabelType="Always"></ejs-textbox>
                     <span asp-validation-for="Icon" class="text-danger"></span>
                 </div>
-                <ejs-button id="submit" type="submit" cssClass="e-success" content="Submit"></ejs-button>
+                <ejs-button id="submit" type="submit" cssClass="e-success" content="Cadastrar"></ejs-button>
             </form>
         </div>
     </div>

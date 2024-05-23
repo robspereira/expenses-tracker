@@ -8,8 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.5" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.5" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -32,6 +35,16 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\Transaction\CreateOrEdit.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Transaction\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Migrations\20240522143653_recreate.cs" />
+      <Compile Remove="Migrations\20240522143653_recreate.Designer.cs" />
+      <Compile Remove="Migrations\ApplicationDbContextModelSnapshot.cs" />
+      <Compile Remove="Migrations\20240523140552_Initial.cs" />
+      <Compile Remove="Migrations\20240523140552_Initial.Designer.cs" />
+      <Compile Remove="Migrations\20240523141239_Initial.cs" />
+      <Compile Remove="Migrations\20240523141239_Initial.Designer.cs" />
     </ItemGroup>
 
 </Project>
