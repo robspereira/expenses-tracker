@@ -1,19 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace Expense_Tracker.Models;
 
-public class User
+public class User : IdentityUser
 {
-    [Key] public int UserId { get; set; }
-
-    [Column(TypeName = "varchar(60)")] public string Name { get; set; }
-
-    [Column(TypeName = "varchar(50)")] public string Email { get; set; }
-    
-    [Column(TypeName = "varchar(50)")] public string Password { get; set; }
-
-    public int TransactionId;
-    public Transaction? Transaction;
-    
+    public double balance { get; set; }
 }
