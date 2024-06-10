@@ -25,19 +25,19 @@ namespace Expense_Tracker.Controllers
                 .ToListAsync();
             
             //Total income
-            int TotalIncome = SelectedTransactions
+            double TotalIncome = SelectedTransactions
                 .Where(i => i.Category.Type == "Income")
                 .Sum(j => j.Amount);
-            ViewBag.TotalIncome = TotalIncome.ToString("C0");
+            ViewBag.TotalIncome = TotalIncome.ToString("N2");
             
-            int TotalExpense = SelectedTransactions
+            double TotalExpense = SelectedTransactions
                 .Where(i => i.Category.Type == "Expense")
                 .Sum(j => j.Amount);
-            ViewBag.TotalExpense = TotalExpense.ToString("C0");
+            ViewBag.TotalExpense = TotalExpense.ToString("N2");
             
             //Balance
-            int Balance = TotalIncome - TotalExpense;
-            CultureInfo culture = CultureInfo.CreateSpecificCulture("en-US");
+            double Balance = TotalIncome - TotalExpense;
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("pt-BR");
             culture.NumberFormat.CurrencyNegativePattern = 1;
             ViewBag.Balance = String.Format(culture, "{0:C0}", Balance);
             
@@ -49,7 +49,7 @@ namespace Expense_Tracker.Controllers
                 {
                     categoryTitleWithIcon = k.First().Category.Icon + " " + k.First().Category.Title,
                     amount = k.Sum(j => j.Amount),
-                    formattedAmount = k.Sum(j => j.Amount).ToString("C0"),
+                    formattedAmount = k.Sum(j => j.Amount).ToString("N2"),
                 }).OrderByDescending(l => l.amount)
                 .ToList();
             
@@ -103,8 +103,8 @@ namespace Expense_Tracker.Controllers
     public class SplineChartData
     {
         public string day;
-        public int income;
-        public int expense;
+        public double income;
+        public double expense;
     }
     
     

@@ -11,8 +11,8 @@ public class Transaction
     public int CategoryId { get; set; }
     public Category? Category { get; set; }
     
-    [Range(1, int.MaxValue, ErrorMessage = "Amount should be greater than 0.")]
-    public int Amount { get; set; }
+    [Range(1, double.MaxValue, ErrorMessage = "Amount should be greater than 0.")]
+    public double Amount { get; set; }
     
     [Column(TypeName = "varchar(75)")] 
     public string? Note { get; set; }
