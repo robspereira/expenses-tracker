@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HE8edU7GB9U+kD675xqqR6DL2wE9fNub2JKGdEkcIueOxJXTlm/og9UdlKOwBEukMjCT4YKyhchRT96ypmPQ1g==",
+  "dgSpecHash": "+1G4/ZNA3Djcafj6ck40ZJRqOCzzFniXVlZ/tup6NczZv3ML8dxK5Oj1RQJswX8SiO4a0o6RlVwcmjCslyz50A==",
   "success": true,
   "projectFilePath": "/home/lucas/Documentos/rider-workspace/expenses-tracker/Expense Tracker.csproj",
   "expectedPackageFiles": [
@@ -127,6 +127,8 @@
     "/home/lucas/.nuget/packages/mono.texttemplating/2.3.1/mono.texttemplating.2.3.1.nupkg.sha512",
     "/home/lucas/.nuget/packages/mysqlconnector/2.3.5/mysqlconnector.2.3.5.nupkg.sha512",
     "/home/lucas/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/lucas/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512",
+    "/home/lucas/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.4/npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
     "/home/lucas/.nuget/packages/nuget.common/6.9.1/nuget.common.6.9.1.nupkg.sha512",
     "/home/lucas/.nuget/packages/nuget.configuration/6.9.1/nuget.configuration.6.9.1.nupkg.sha512",
     "/home/lucas/.nuget/packages/nuget.dependencyresolver.core/6.9.1/nuget.dependencyresolver.core.6.9.1.nupkg.sha512",

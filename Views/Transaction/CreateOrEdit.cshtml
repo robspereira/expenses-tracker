@@ -12,7 +12,7 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" name="TransactionId" value="@Model.TransactionId" />
                 <div class="mb-3">
-                    <ejs-datepicker id="date" ejs-for="Date" placeholder="Data da transação" floatLabelType="Always" format="dd/mm/yyyy"></ejs-datepicker>
+                    <ejs-datepicker id="date" ejs-for="Date" placeholder="Data da transação" floatLabelType="Always" format="dd/MMM/yyyy"></ejs-datepicker>
                 </div>
                 <div class="mb-3">
                     <ejs-dropdownlist id="ddlCategory" ejs-for="CategoryId" dataSource="@ViewBag.Categories"
@@ -24,7 +24,7 @@
                     <span asp-validation-for="CategoryId" class="text-danger fs-6"></span>
                 </div>
                 <div class="mb-3">
-                    <ejs-numerictextbox id="amount" ejs-for="Amount" placeholder="Quantidade" floatLabelType="Always" min="0" format="c0"></ejs-numerictextbox>
+                    <ejs-numerictextbox id="amount" ejs-for="Amount" placeholder="Quantidade" floatLabelType="Always" min="0" format="N2"></ejs-numerictextbox>
                     <span asp-validation-for="Amount" class="text-danger fs-6"></span>
                 </div>
                 <div class="mb-3">
