@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/lucas/Documentos/rider-workspace/Expense Tracker/Expense Tracker.csproj": {}
+    "/home/lucas/Documentos/rider-workspace/expenses-tracker/Expense Tracker.csproj": {}
   },
   "projects": {
-    "/home/lucas/Documentos/rider-workspace/Expense Tracker/Expense Tracker.csproj": {
+    "/home/lucas/Documentos/rider-workspace/expenses-tracker/Expense Tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lucas/Documentos/rider-workspace/Expense Tracker/Expense Tracker.csproj",
+        "projectUniqueName": "/home/lucas/Documentos/rider-workspace/expenses-tracker/Expense Tracker.csproj",
         "projectName": "Expense Tracker",
-        "projectPath": "/home/lucas/Documentos/rider-workspace/Expense Tracker/Expense Tracker.csproj",
+        "projectPath": "/home/lucas/Documentos/rider-workspace/expenses-tracker/Expense Tracker.csproj",
         "packagesPath": "/home/lucas/.nuget/packages/",
-        "outputPath": "/home/lucas/Documentos/rider-workspace/Expense Tracker/obj/",
+        "outputPath": "/home/lucas/Documentos/rider-workspace/expenses-tracker/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/lucas/.nuget/NuGet/NuGet.Config"
@@ -107,7 +107,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.4, 8.0.4]"
+              "version": "[8.0.6, 8.0.6]"
             }
           ],
           "frameworkReferences": {
@@ -118,7 +118,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.106/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -13,11 +13,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddControllersWithViews();
 
 /*Authentication & authorization*/
-builder.Services.AddAuthorization();
-builder.Services.AddAuthentication().AddCookie(IdentityConstants.ApplicationScheme)
-    .AddBearerToken(IdentityConstants.BearerScheme);
 
-builder.Services.AddIdentityCore<User>().AddEntityFrameworkStores<ApplicationDbContext>().AddApiEndpoints();
 
 var connectionString = builder.Configuration.GetConnectionString("DevConnection");
 
@@ -46,8 +42,6 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
-app.MapIdentityApi<User>();
 
 app.MapControllerRoute(
     name: "default",

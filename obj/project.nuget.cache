@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VTPi/D+V/dFQoMlfryi1tbp8gYgnUbbM7ZIecOkqKmSjlUsVjiltkgWiVIY5OSgrPe/Op9W+V1jMuIWlt/t72w==",
+  "dgSpecHash": "HE8edU7GB9U+kD675xqqR6DL2wE9fNub2JKGdEkcIueOxJXTlm/og9UdlKOwBEukMjCT4YKyhchRT96ypmPQ1g==",
   "success": true,
-  "projectFilePath": "/home/lucas/Documentos/rider-workspace/Expense Tracker/Expense Tracker.csproj",
+  "projectFilePath": "/home/lucas/Documentos/rider-workspace/expenses-tracker/Expense Tracker.csproj",
   "expectedPackageFiles": [
     "/home/lucas/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/home/lucas/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
@@ -186,7 +186,7 @@
     "/home/lucas/.nuget/packages/system.threading.tasks.dataflow/7.0.0/system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "/home/lucas/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/home/lucas/.nuget/packages/system.windows.extensions/7.0.0/system.windows.extensions.7.0.0.nupkg.sha512",
-    "/home/lucas/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.4/microsoft.aspnetcore.app.ref.8.0.4.nupkg.sha512"
+    "/home/lucas/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.6/microsoft.aspnetcore.app.ref.8.0.6.nupkg.sha512"
   ],
   "logs": []
 }
